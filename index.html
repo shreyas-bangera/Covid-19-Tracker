@@ -61,11 +61,6 @@
             success: function (result) {
                 jsonData = result;
                 result = _.sortBy(result.data, "name");
-
-                result.sort(function(a, b) {
-				    return a.name > b.name;
-				});
-
                 _.forEach(result, function (elem) {
                     $('#country').append('<option value=' + elem.code + '>' + elem.name + '</option>');
                 });
